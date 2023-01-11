@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Front end Diploma",
+    "description": "This is the description of the course of this card",
+    "rate": 4,
+    "price": "3600 L.E",
+    "image" : "assets/images/front-end-diploma.jpg"
+  },
+  {
+    "id" : 2,
+    "title": "English Course",
+    "description": "This is the description of the course of this card",
+    "rate": 5,
+    "price": "1500 L.E",
+    "image" : "assets/images/english-course.jpg"
+  },
+  {
+    "id" : 3,
+    "title": "Marketing Diploma",
+    "description": "This is the description of the course of this card",
+    "rate": 3,
+    "price": "3100 L.E",
+    "image" : "assets/images/marketing.jpg"
+  },
+  {
+    "id" : 4,
+    "title": "Back end Diploma",
+    "description": "This is the description of the course of this card",
+    "rate": 4,
+    "price": "3600 L.E",
+    "image" : "assets/images/back-end-diploma.jpg"
+  },
+  {
+    "id" : 5,
+    "title": "Introduction to CS Diploma",
+    "description": "This is the description of the course of this card",
+    "rate": 5,
+    "price": "3000 L.E",
+    "image" : "assets/images/intro-to-cs-diploma.png"
+  },
+  {
+    "id" : 6,
+    "title": "Programming for kids",
+    "description": "This is the description of the course of this card",
+    "rate": 4,
+    "price": "2000 L.E",
+    "image" : "assets/images/Programming-Course-for-Kids.jpg"
+  }
+]

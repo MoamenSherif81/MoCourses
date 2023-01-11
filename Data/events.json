@@ -1,0 +1,62 @@
+[
+  {
+    "id" : 1,
+    "title": "What is CS?",
+    "description": "This is the description of the course of this card",
+    "speaker": "Osama Elzero",
+    "location": "Eraasoft, Cairo",
+    "day": 16,
+    "month": "may",
+    "from-hour": "10:00 AM",
+    "to-hour": "3:00 PM",
+    "image" : "assets/images/What is CS.jpg"
+  },
+  {
+    "id" : 2,
+    "title": "Programming Fields",
+    "description": "This is the description of the course of this card",
+    "speaker": "Mostafa Mahfouz",
+    "location": "Eraasoft, Cairo",
+    "day": 16,
+    "month": "may",
+    "from-hour": "10:00 AM",
+    "to-hour": "3:00 PM",
+    "image" : "assets/images/Programming fields.jpeg"
+  },
+  {
+    "id" : 3,
+    "title": "5th Aniverssary for MoCourses",
+    "description": "This is the description of the course of this card",
+    "speaker": "Mahmoud El-Gezawy",
+    "location": "Eraasoft, Cairo",
+    "day": 16,
+    "month": "may",
+    "from-hour": "10:00 AM",
+    "to-hour": "3:00 PM",
+    "image" : "assets/images/5th Ani.jpg"
+  },
+  {
+    "id" : 2,
+    "title": "Programming Fields",
+    "description": "This is the description of the course of this card",
+    "speaker": "Mostafa Mahfouz",
+    "location": "Eraasoft, Cairo",
+    "day": 16,
+    "month": "may",
+    "from-hour": "10:00 AM",
+    "to-hour": "3:00 PM",
+    "image" : "assets/images/Programming fields.jpeg"
+  },
+  {
+    "id" : 2,
+    "title": "Programming Fields",
+    "description": "This is the description of the course of this card",
+    "speaker": "Mostafa Mahfouz",
+    "location": "Eraasoft, Cairo",
+    "day": 16,
+    "month": "may",
+    "from-hour": "10:00 AM",
+    "to-hour": "3:00 PM",
+    "image" : "assets/images/Programming fields.jpeg"
+  }
+]
