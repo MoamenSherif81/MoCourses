@@ -6,9 +6,9 @@
     "speaker": "Osama Elzero",
     "location": "Eraasoft, Cairo",
     "day": 16,
-    "month": "may",
-    "from-hour": "10:00 AM",
-    "to-hour": "3:00 PM",
+    "month": "May",
+    "fromHour": "10:00 AM",
+    "toHour": "3:00 PM",
     "image" : "assets/images/What is CS.jpg"
   },
   {
@@ -18,9 +18,9 @@
     "speaker": "Mostafa Mahfouz",
     "location": "Eraasoft, Cairo",
     "day": 16,
-    "month": "may",
-    "from-hour": "10:00 AM",
-    "to-hour": "3:00 PM",
+    "month": "May",
+    "fromHour": "10:00 AM",
+    "toHour": "3:00 PM",
     "image" : "assets/images/Programming fields.jpeg"
   },
   {
@@ -30,33 +30,33 @@
     "speaker": "Mahmoud El-Gezawy",
     "location": "Eraasoft, Cairo",
     "day": 16,
-    "month": "may",
-    "from-hour": "10:00 AM",
-    "to-hour": "3:00 PM",
+    "month": "May",
+    "fromHour": "10:00 AM",
+    "toHour": "3:00 PM",
     "image" : "assets/images/5th Ani.jpg"
   },
   {
-    "id" : 2,
+    "id" : 4,
     "title": "Programming Fields",
     "description": "This is the description of the course of this card",
     "speaker": "Mostafa Mahfouz",
     "location": "Eraasoft, Cairo",
     "day": 16,
-    "month": "may",
-    "from-hour": "10:00 AM",
-    "to-hour": "3:00 PM",
+    "month": "May",
+    "fromHour": "10:00 AM",
+    "toHour": "3:00 PM",
     "image" : "assets/images/Programming fields.jpeg"
   },
   {
-    "id" : 2,
+    "id" : 5,
     "title": "Programming Fields",
     "description": "This is the description of the course of this card",
     "speaker": "Mostafa Mahfouz",
     "location": "Eraasoft, Cairo",
     "day": 16,
-    "month": "may",
-    "from-hour": "10:00 AM",
-    "to-hour": "3:00 PM",
+    "month": "May",
+    "fromHour": "10:00 AM",
+    "toHour": "3:00 PM",
     "image" : "assets/images/Programming fields.jpeg"
   }
 ]

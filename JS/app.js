@@ -1,4 +1,15 @@
 $(document).ready(function(){
+  const options = { threshold: .25 }
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        $(entry.target).addClass('appeared');
+      } else {
+        return;
+      }
+    });
+  }, options);
+
   //nav bar start
   $(document).scroll(() => {
     $('nav').toggleClass('nav-down', $(this).scrollTop() > $('nav').height())
@@ -54,7 +65,7 @@ $(document).ready(function(){
       cnt++;
       if(cnt > 6) break;
       let card = document.createElement('div');
-      $(card).addClass('col-12 col-md-6 col-lg-4 mt-4');
+      $(card).addClass('col-12 col-md-6 col-lg-4 mt-4 fade-in');
       card.innerHTML = 
       `
       <div class="card course-card border-0">
@@ -76,6 +87,7 @@ $(document).ready(function(){
         </div>
       </div>
       `
+      observer.observe(card);
       let stars = $(card).find('.star');
       for(let i = 0; i < course.rate; i++){
         $(stars[i]).addClass('filled');
@@ -92,15 +104,21 @@ $(document).ready(function(){
       cnt++;
       if(cnt > 3) break;
       let card = document.createElement('div');
-      $(card).addClass('col-12 col-md-6 col-lg-4 mt-4');
+      $(card).addClass('col-12 col-md-6 col-lg-4 mt-4 fade-in');
+      observer.observe(card);
       card.innerHTML = 
       `
       <div class="card course-card border-0 h-100">
         <img src="${event.image}" class="card-img-top" alt="...">
         <div class="event-time-cont">
-          <div class="event-date"></div>
-          <div class="event-start-date"></div>
-          <div class="event-end-date"></div>
+          <div class="event-date">
+            <div class="event-day ft--20">${event.day}</div>
+            <div class="event-month ft--15">${event.month}</div>
+          </div>
+          <div class="event-time">
+            <div class="event-time-start ft--15">${event.fromHour}</div>
+            <div class="event-time-end ft--15">${event.toHour}</div>
+          </div>
         </div>
         <div class="card-content p-4">
           <div class="card-body p-0">
@@ -119,11 +137,17 @@ $(document).ready(function(){
           </div>
         </div>
       </div>
-      `
+      `;
+      observer.observe(card.querySelector('.card'));
       $('.events-cont').append(card);
     }
   })
-  //Events Section end
-  
-  //
+
+  const observeObj = document.querySelectorAll('.fade-in');
+  observeObj.forEach(ele => {
+    observer.observe(ele);
+  })
+  const date = new Date();
+  const dateCont = document.getElementById('date');
+  dateCont.innerHTML = date.getFullYear();
 });
