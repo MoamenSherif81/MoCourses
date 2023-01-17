@@ -7,6 +7,7 @@ $(document).ready(function(){
       $('.single-course').find('.single-course-title').text(course.title);
       $('.single-course').find('.single-course-instructor').text(course.instructor);
       $('.single-course').find('.single-course-instructor-img img').attr('src', course.instructorImg);
+      $('.single-course').find('.single-course-image img').attr('src', course.image);
       $('.single-course').find('.single-course-stud-num').text(course.students);
       $('.single-course').find('.single-course-categories').text(course.categories.join(', '));
       $('.single-course').find('.overview-text').text(course.description);
