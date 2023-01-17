@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(() => {
   //nav bar start
   $(document).scroll(() => {
     $('nav').toggleClass('nav-down', $(this).scrollTop() > $('nav').height())
@@ -13,7 +13,7 @@ $(document).ready(function(){
       $('.nav-items-cont').attr('expanded', 'false');
     }
   })
-  $(window).on('resize', function(event){
+  $(window).on('resize', () => {
     if($(window).width() > 768){
       $('.nav-items-cont').height('auto');
     } else {
@@ -31,5 +31,5 @@ $(document).ready(function(){
 });
 
 function goToCourse(id){
-  window.location.href = 'course.html?cardId=' + id;
+  window.location.href = 'single-course.html?cardId=' + id;
 }

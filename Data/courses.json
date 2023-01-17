@@ -9,7 +9,8 @@
     "students": 275,
     "rate": 4,
     "price": "3600 L.E",
-    "image" : "assets/images/front-end-diploma.jpg"
+    "image": "assets/images/front-end-diploma.jpg",
+    "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
     "id" : 2,
@@ -21,7 +22,8 @@
     "students": 90,
     "rate": 5,
     "price": "1500 L.E",
-    "image" : "assets/images/english-course.jpg"
+    "image": "assets/images/english-course.jpg",
+    "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
     "id" : 3,
@@ -33,7 +35,8 @@
     "students": 88,
     "rate": 3,
     "price": "3100 L.E",
-    "image" : "assets/images/marketing.jpg"
+    "image": "assets/images/marketing.jpg",
+    "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
     "id" : 4,
@@ -45,7 +48,8 @@
     "students": 223,
     "rate": 4,
     "price": "3600 L.E",
-    "image" : "assets/images/back-end-diploma.jpg"
+    "image": "assets/images/back-end-diploma.jpg",
+    "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
     "id" : 5,
@@ -57,7 +61,8 @@
     "students": 400,
     "rate": 5,
     "price": "3000 L.E",
-    "image" : "assets/images/intro-to-cs-diploma.png"
+    "image": "assets/images/intro-to-cs-diploma.png",
+    "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
     "id" : 6,
@@ -69,6 +74,7 @@
     "students": 150,
     "rate": 4,
     "price": "2000 L.E",
-    "image" : "assets/images/Programming-Course-for-Kids.jpg"
+    "image": "assets/images/Programming-Course-for-Kids.jpg",
+    "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   }
 ]

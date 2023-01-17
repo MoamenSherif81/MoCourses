@@ -18,6 +18,15 @@ body{font-family: 'Rubik', sans-serif; overflow-x: hidden;}
 .ft--30{font-size: 30px;}
 .dis-none{display: none;}
 
+.site-link{
+  color: black;
+  text-decoration: none;
+  transition: .3s;
+}
+.site-link:hover{
+  color: var(--sec-color);
+}
+
 .fade-in{
   transform: translateY(-50px);
   opacity: 0;
@@ -482,16 +491,6 @@ footer a:hover{
   transform: translateX(7px);
 }
 
-.footer-post img{
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
-}
-
-.post-date{
-  color: rgba(255, 255, 255, .5);
-}
-
 .email-input{
   padding: 10px 20px;
   border-radius: 20px;
@@ -596,6 +595,25 @@ footer a:hover{
   }
 }
 
+/* Small cards Start*/
+.small-card-img{
+  width: 70px;
+  height: 70px;
+}
+.small-card-img img{
+  object-fit: cover;
+  border-radius: 5px;
+}
+.card-title-hr{
+  background-color: var(--sec-color);
+  width: 100px;
+  height: 4px;
+  transform: translateY(-3px);
+  border-radius: 2px;
+}
+
+/* Small cards End */
+
 /* Course Page Start */
   /* Course Main Start */
   .course-main{
@@ -667,6 +685,14 @@ footer a:hover{
     height: 260px;
   }
   /* Course Details End */
+
+  /* Tags Start */
+  .tags .tag{
+    border: 1px solid #cacaca;
+    padding: 7px 15px;
+    border-radius: 3px;
+  }
+  /* Tags End */
 
   @media (max-width: 768px){
     .single-course-image{
