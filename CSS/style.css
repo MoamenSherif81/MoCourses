@@ -646,6 +646,7 @@ footer a:hover{
   }
   .single-course-instructor-img img{
     object-fit: cover;
+    object-position: top;
     border-radius: 5px;
   }
   .single-course-details{
