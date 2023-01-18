@@ -25,6 +25,7 @@ $(document).ready(function(){
   })
   $('.carousel-next').click(() => changeSlide('next'));
   $('.carousel-prev').click(() => changeSlide('prev'));
+  for(let i = 1; i < slidesText.length; i++) $(slidesText[i]).hide();
   function changeSlide(dir){
     let prev = currentSlide;
     let currSlide, currSlideText;
@@ -37,13 +38,14 @@ $(document).ready(function(){
       else if($(slides[i]).attr('slide-id') == currentSlide) currSlide = slides[i];
     }
     for(let i = 0; i < slidesText.length; i++){
-      if($(slidesText[i]).attr('slide-id') == currentSlide) 
+      if($(slidesText[i]).attr('slide-id') == currentSlide)
         currSlideText = slidesText[i];
-      $(slidesText[i]).children().fadeOut();
+      $(slidesText[i]).children().fadeOut(() => $(slidesText[i]).hide());
     }
     $(prevSlideText).children().fadeOut();
     $(prevSlide).fadeOut(() =>  
       $(currSlide).fadeIn(() => {
+        $(currSlideText).show();
         $(currSlideText).children().fadeIn();
       })
     );

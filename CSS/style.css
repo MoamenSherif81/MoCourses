@@ -73,13 +73,6 @@ nav {
   font-size: 18px;
 }
 
-.nav-item a:hover {
-  color: var(--main-color);
-}
-.nav-down a:hover {
-  color: var(--sec-color);
-}
-
 .black-cover {
   background-color: rgba(0, 0, 0, .6);
   width: 100%;
@@ -721,3 +714,35 @@ footer a:hover{
     
   }
 /*  */
+
+/* All courses Page Start*/
+
+.all-courses img{
+  height: 300px;
+}
+
+.slides-naigation .navigation-btn{
+  color: #a4a4a4;
+  border: 1px solid #a4a4a4;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.slides-naigation .navigation-btn.active{
+  color: white;
+  background-color: var(--sec-color);
+  border: none;
+}
+
+.courses{
+  transition: .6s;
+  overflow: hidden;
+}
+.courses-cont{
+  overflow: hidden;
+}
+
+/* All courses Page End */
