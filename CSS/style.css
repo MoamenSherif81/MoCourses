@@ -50,6 +50,7 @@ nav {
 
 .nav-down {
   background-color: black;
+  box-shadow: 1px 1px 13px 1px;
 }
 
 .logo-cont { width: 200px; }
