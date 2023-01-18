@@ -12,7 +12,9 @@ body{font-family: 'Rubik', sans-serif; overflow-x: hidden;}
   justify-content: center;
   align-items: center;
 }
+.ft--14{font-size: 14px;}
 .ft--15{font-size: 15px;}
+.ft--16{font-size: 16px;}
 .ft--18{font-size: 18px;}
 .ft--20{font-size: 20px;}
 .ft--30{font-size: 30px;}
@@ -431,7 +433,7 @@ main .slide-text.active{
 .instructor-social{
   opacity: 0;
   visibility: hidden;
-  transition: .3s;
+  transition: .5s;
 }
 .instructor-image img{
   height: 261px;
@@ -442,10 +444,16 @@ main .slide-text.active{
   opacity: 1;
   visibility: visible;
 }
+.instructor-image:hover .instructor-social .social-icon{
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
 .social-icon{
   color: white;
   cursor: pointer;
-  transition: .3s;
+  transition: .5s;
+  transform: scale(0) translateY(200px);
+  opacity: 0;
 }
 .social-icon:hover{
   color: var(--sec-color);
@@ -554,6 +562,7 @@ footer a:hover{
     padding: 25px 0;
     border-bottom: 1px solid black;
     font-size: 18px;
+    color: black;
   }
   .nav-item:first-child{
     border-top: 1px solid black;
@@ -714,36 +723,62 @@ footer a:hover{
   @media (max-width: 500px){
     
   }
-/*  */
+/* Course Page End */
 
 /* All courses Page Start*/
+  .all-courses img{
+    height: 300px;
+  }
 
-.all-courses img{
-  height: 300px;
-}
+  .slides-naigation .navigation-btn{
+    color: #a4a4a4;
+    border: 1px solid #a4a4a4;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+  }
 
-.slides-naigation .navigation-btn{
-  color: #a4a4a4;
-  border: 1px solid #a4a4a4;
-  background-color: transparent;
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  font-size: 20px;
-}
+  .slides-naigation .navigation-btn.active{
+    color: white;
+    background-color: var(--sec-color);
+    border: none;
+  }
 
-.slides-naigation .navigation-btn.active{
-  color: white;
-  background-color: var(--sec-color);
-  border: none;
-}
-
-.courses{
-  transition: .6s;
-  overflow: hidden;
-}
-.courses-cont{
-  overflow: hidden;
-}
-
+  .courses{
+    transition: .6s;
+    overflow: hidden;
+  }
+  .courses-cont{
+    overflow: hidden;
+  }
 /* All courses Page End */
+
+/* Single Instructor Page Start */
+.single-instructor .instructor-img{
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+.contact-title{
+  width: 82px;
+  margin-right: 15px;
+}
+.exp-title, .exp-datails{
+  border: 1px solid #d1d1d1;
+  border-bottom: 0;
+}
+.instructor-experience{
+  border-bottom: 1px solid #d1d1d1;
+}
+.exp-title{
+  cursor: pointer;
+}
+.exp-datails{
+  transition: .3s;
+  padding: 24px;
+  overflow: hidden;
+}
+.arrow{transition: .3s;}
+/* Single Instructor Page End */
