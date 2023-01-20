@@ -137,6 +137,35 @@ $(document).ready(function(){
     }
   })
 
+  $.getJSON('Data/instructors.json', (instructors) => {
+    let cnt = 0;
+    for(instructor of instructors){
+      cnt++;
+      if(cnt > 4) break;
+      let card = document.createElement('div');
+      $(card).addClass('col-12 col-sm-6 col-lg-3 mb-3 m-lg-0');
+      card.innerHTML = 
+      `
+      <div class="card text-left border-0 shadow h-100">
+          <div class="instructor-image position-relative">
+            <img class="card-img-top" src="assets/images/${instructor.image}" alt="">
+            <div class="instructor-social d-flex justify-content-center align-items-center 
+                        gap-4 position-absolute top-0 start-0 h-100 w-100">
+              <a class="social-icon" href=""><i class="fa-brands fa-facebook"></i></a>
+              <a class="social-icon" href=""><i class="fa-brands fa-twitter"></i></a>
+              <a class="social-icon" href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title ft--18"><a class="site-link" href="single-instructor.html?instId=${instructor.id}">${instructor.name}</a></h4>
+            <h4 class="card-description ft--15 text-secondary">${instructor.work}</h4>
+          </div>
+        </div>
+      `
+      $('.instructors-cont').append(card);
+    }
+  });
+
   const observeObj = document.querySelectorAll('.fade-in');
   observeObj.forEach(ele => {
     observer.observe(ele);

@@ -90,3 +90,7 @@ function changeSlide(){
     });
   }
 }
+
+$(window).on('scroll', () => {
+  $(('.courses')).height($('.courses-cont').prop('scrollHeight'));
+})

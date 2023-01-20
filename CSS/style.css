@@ -204,9 +204,9 @@ main .slide-text.active{
   border-radius: 15px;
   padding: 30px;
   background-color: white;
-  box-shadow: 0px 0px 21px -14px black;
   transition: .5s;
   height: 100%;
+  box-shadow: 0px 0px 9px -7px black;
 }
 
 .why-card-icon{
@@ -236,6 +236,7 @@ main .slide-text.active{
 
 .why-card:hover{
   transform: translateY(-10px);
+  box-shadow: 0px 0px 21px -14px black;
 }
 
 .why-card:hover .why-card-icon:after{
@@ -750,35 +751,38 @@ footer a:hover{
     transition: .6s;
     overflow: hidden;
   }
-  .courses-cont{
+  .all-courses .courses-cont{
     overflow: hidden;
   }
 /* All courses Page End */
 
 /* Single Instructor Page Start */
-.single-instructor .instructor-img{
-  height: 400px;
-  object-fit: cover;
-  object-position: center;
-}
-.contact-title{
-  width: 82px;
-  margin-right: 15px;
-}
-.exp-title, .exp-datails{
-  border: 1px solid #d1d1d1;
-  border-bottom: 0;
-}
-.instructor-experience{
-  border-bottom: 1px solid #d1d1d1;
-}
-.exp-title{
-  cursor: pointer;
-}
-.exp-datails{
-  transition: .3s;
-  padding: 24px;
-  overflow: hidden;
-}
-.arrow{transition: .3s;}
+  .single-instructor .instructor-img{
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .contact-title{
+    width: 82px;
+    margin-right: 15px;
+  }
+  .exp-title, .exp-datails{
+    border: 1px solid #d1d1d1;
+    border-bottom: 0;
+  }
+  .instructor-experience{
+    border-bottom: 1px solid #d1d1d1;
+  }
+  .exp-title{
+    cursor: pointer;
+  }
+  .exp-datails{
+    transition: .3s;
+    padding: 24px;
+    overflow: hidden;
+  }
+  .arrow, .inst{transition: .3s;}
+  .inst{
+    overflow: hidden;
+  }
 /* Single Instructor Page End */
