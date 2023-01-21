@@ -301,9 +301,14 @@ main .slide-text.active{
   color: white;
   font-size: 20px;
   transition: .3s;
+  width: fit-content;
+  text-decoration: none;
+  cursor: pointer;
+
 }
 .courses-btn:hover{
   background-color: #ca9400;
+  color: white;
 }
 /*Courses Section End*/
 
@@ -786,3 +791,23 @@ footer a:hover{
     overflow: hidden;
   }
 /* Single Instructor Page End */
+
+.code-area-cont{
+  height: 33.3333333%;
+  padding: 10px 0;
+}
+.code-area{
+  height: 100%;
+  resize: none;
+}
+
+.code-editor{
+  height: calc(100vh - 63.92px);
+  margin-top: 63.92px;
+  padding: 0;
+  padding: 20px 0;
+}
+
+#code-output{
+  border: 1px solid black;
+}
