@@ -811,3 +811,11 @@ footer a:hover{
 #code-output{
   border: 1px solid black;
 }
+
+.tab{
+  width: fit-content;
+}
+
+@media (max-width: 950px){
+  
+}
