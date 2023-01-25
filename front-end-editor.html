@@ -33,7 +33,7 @@
             <li class="nav-item"><a class="site-link" href="index.html">Home</a></li>
             <li class="nav-item"><a>Courses</a></li>
             <li class="nav-item"><a class="site-link" href="instructors.html">Instructors</a></li>
-            <li class="nav-item"><a class="site-link" href="">My Courses</a></li>
+            <li class="nav-item"><a class="site-link" href="">Tasks</a></li>
             <li class="nav-item"><a class="site-link" href="">About</a></li>
           </ul>
         </div> 
@@ -47,45 +47,30 @@
   <!-- Nav Bar End -->
 
   <section class="site-sec code-editor">
-    <!-- <div class="container-fluid">
-      <div class="row mb-2">
-        <div class="col-4">
-          <textarea class="code-area w-100 p-2 shadow" id="html-code"></textarea>
+    <div class="container-fluid px-3">
+      <div class="row mb-2">  
+        <div class="tabs">
+          <div class="tab tab-btn border border-bottom-0 py-2 px-3 ft--17 d-inline-block d-lg-none active" data-id="html-code-cont">HTML</div>
+          <div class="tab tab-btn border border-bottom-0 py-2 px-3 ft--17 d-inline-block d-lg-none" data-id="css-code-cont">CSS</div>
+          <div class="tab tab-btn border border-bottom-0 py-2 px-3 ft--17 d-inline-block d-lg-none" data-id="js-code-cont">JS</div>
         </div>
-        <div class="col-4">
-          <textarea class="code-area w-100 p-2 shadow" id="js-code"></textarea>
+        <div class="col-lg-4 code-area-cont px-2 mb-0 mb-lg-5" id="html-code-cont" active="true">
+          <div class="tab border border-bottom-0 py-2 px-3 ft--17 d-none d-lg-block">HTML</div>
+          <div class="code-area w-100 p-2 shadow ft--20" id="html-code"></div>
         </div>
-        <div class="col-4">
-          <textarea class="code-area w-100 p-2 shadow" id="css-code"></textarea>
+        <div class="col-lg-4 code-area-cont px-2 mb-0 mb-lg-5" id="css-code-cont" active="false">
+          <div class="tab border border-bottom-0 py-2 px-3 ft--17 d-none d-lg-block">CSS</div>
+          <div class="code-area w-100 p-2 shadow ft--20" id="css-code"></div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <iframe class="w-100" id="code-output"></iframe>
-        </div>
-      </div>
-    </div> -->
-    <div class="container-fluid h-100">
-      <div class="row mb-2 h-100">
-        <div class="col-4 h-100"> 
-          <div class="h-100">
-            <div class="code-area-cont py-1">
-              <div class="code-area w-100 p-2 shadow ft--20" id="html-code"></div>
-            </div>
-            <div class="code-area-cont py-1">
-              <div class="code-area w-100 p-2 shadow ft--20" id="css-code"></div>
-            </div>
-            <div class="code-area-cont py-1">
-              <div class="code-area w-100 p-2 shadow ft--20" id="js-code"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-8 py-1 h-100">
-          <iframe class="w-100 shadow h-100" id="code-output"></iframe>
+        <div class="col-lg-4 code-area-cont px-2 mb-0 mb-lg-5" id="js-code-cont" active="false">
+          <div class="tab border border-bottom-0 py-2 px-3 ft--17 d-none d-lg-block">JS</div>
+          <div class="code-area w-100 p-2 shadow ft--20" id="js-code"></div>
         </div>
       </div>
       <div class="row">
-        
+        <div class="col py-2">
+          <iframe class="w-100 shadow" id="code-output"></iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -183,6 +168,6 @@
   <!-- Main js fiele -->
   <script src="JS/app.js"></script>
   <!-- Course js file -->
-  <script src="JS/CodeTry.js"></script>
+  <script src="JS/front-end-editor.js"></script>
 </body>
 </html>

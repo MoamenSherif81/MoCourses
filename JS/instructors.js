@@ -85,6 +85,6 @@ function changeSlide(){
   }
 }
 
-$(window).on('scroll', () => {
+$(window).resize(() => {
   $(('.inst')).height($('.instructors-cont').prop('scrollHeight'));
 })

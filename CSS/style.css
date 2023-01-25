@@ -792,9 +792,9 @@ footer a:hover{
   }
 /* Single Instructor Page End */
 
+/* Try front-end code editor Start */
 .code-area-cont{
-  height: 33.3333333%;
-  padding: 10px 0;
+  height: 300px;
 }
 .code-area{
   height: 100%;
@@ -802,7 +802,6 @@ footer a:hover{
 }
 
 .code-editor{
-  height: calc(100vh - 63.92px);
   margin-top: 63.92px;
   padding: 0;
   padding: 20px 0;
@@ -810,12 +809,15 @@ footer a:hover{
 
 #code-output{
   border: 1px solid black;
+  height: 900px;
 }
 
 .tab{
   width: fit-content;
 }
 
-@media (max-width: 950px){
-  
+.tab-btn.active{
+  background-color:#202325;
+  color: white;
 }
+/* Try front-end code editor End */
