@@ -87,6 +87,11 @@ nav {
   left: 0;
 }
 
+.side-nav-btn-cont{
+  cursor: pointer;
+  height: 30px;
+}
+
 .side-nav-btn,
 .side-nav-btn:before,
 .side-nav-btn:after{
@@ -599,16 +604,16 @@ footer a:hover{
     word-break: keep-all;
     width: 100%;
     margin: 0;
-    padding: 25px 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(148, 148, 148);
     font-size: 18px;
     color: black;
-  }
-  .nav-item:first-child{
-    border-top: 1px solid black;
+    height: fit-content;
   }
   .nav-item a{
+    display: block;
     color: black;
+    padding: 20px 0;
+    width: 100%;
   }
   .nav-items-cont{
     height: 0;
@@ -855,3 +860,56 @@ footer a:hover{
   color: white;
 }
 /* Try front-end code editor End */
+
+.tasks-sec{
+  background-color: #f6f7f6;
+}
+
+.task-expand{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px black solid;
+  transition: .3s;
+  font-size: 20px;
+}
+
+.course-details{
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .15);
+  cursor: pointer;
+}
+.course-details-title, .task-expand{
+  margin: 16px 30px;
+}
+
+.tasks{
+  overflow: hidden;
+  transition: .3s;
+  height: 0;
+}
+
+.task{
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .15);
+  border-radius: 25px;
+  margin-bottom: 15px;
+  padding: 15px 25px;
+}
+
+.task-icon{
+  width: 40px;
+  height: 40px;
+  padding: 13px;
+  font-size: 22px;
+}
+
+@media (max-width: 768px){
+  .course .course-details-title,
+  .course .task-expand,
+  .course .task-title{
+    font-size: 18px;
+  }
+  .course-details-title, 
+  .task-expand{
+    margin: 10px 20px;
+  }
+}

@@ -53,29 +53,116 @@
     <div class="container">
       <div class="main-text ft--20">
         <div class="title">
-          <h1>Our Courses</h1>
+          <h1>Your Tasks</h1>
         </div>
         <div class="page-details">
-          <a href="index.html">Home</a> / <a href="">Courses</a>
+          <a href="index.html">Home</a> / <a href="">Tasks</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="site-sec all-courses">
+  <section class="site-sec tasks-sec">
     <div class="container">
-      <div class="courses bg-white">
-        <div class="courses-cont row justify-content-center p-2">
-          
+      <div class="my-courses">
+        <div class="course rounded-5">
+          <div class="course-details d-flex align-items-center justify-content-between bg-white rounded-5" targetId="front-408">
+            <h5 class="course-details-title my-0">Front end 408</h5>
+            <div class="task-expand p-2 content--center">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="tasks mx-3 mx-md-4 my-3" expanded="false" id="front-408">
+            <div class="task d-flex align-items-center bg-white">
+              <div class="task-icon task-icon-video content--center bg-black text-white rounded-circle">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h5 class="m-0 ms-2 task-title">Code Editor</h5>
+            </div>
+            <div class="task d-flex align-items-center bg-white">
+              <div class="task-icon task-icon-text content--center bg-warning rounded-circle">
+                <i class="fa-regular fa-file"></i>
+              </div>
+              <h5 class="m-0 ms-2 task-title">Task 1</h5>
+            </div>
+            <div class="task d-flex align-items-center bg-white">
+              <div class="task-icon task-icon-video content--center bg-info rounded-circle">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <h5 class="m-0 ms-2 task-title">Video 1</h5>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="slides-naigation text-center mt-5 d-flex justify-content-center gap-2">
-        <button class="navigation-btn content--center slide-prev"><i class="fa-solid fa-arrow-left"></i></button>
-        <button class="navigation-btn content--center slide-next"><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="course rounded-5">
+          <div class="course-details d-flex align-items-center justify-content-between bg-white rounded-5" targetId="marketing-1002">
+            <h5 class="course-details-title my-0">Marketing 1002</h5>
+            <div class="task-expand p-2 content--center">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="tasks mx-3 mx-md-4 my-3" expanded="false" id="marketing-1002">
+            <div class="task d-flex align-items-center bg-white">
+              <div class="task-icon task-icon-video content--center bg-info rounded-circle">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <h5 class="m-0 ms-2 task-title">Video 1</h5>
+            </div>
+            <div class="task d-flex align-items-center bg-white">
+              <div class="task-icon task-icon-text content--center bg-warning rounded-circle">
+                <i class="fa-regular fa-file"></i>
+              </div>
+              <h5 class="m-0 ms-2 task-title">Task 1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="course rounded-5">
+          <div class="course-details d-flex align-items-center justify-content-between bg-white rounded-5" targetId="intro-213">
+            <div class="d-flex align-items-center">
+              <h5 class="my-0 course-details-title text-center">Intro to cs 213</h5>
+              <div class="course-done alert alert-success m-0 py-2 px-3">
+                Finished
+              </div>
+            </div>
+            <div class="task-expand p-2 content--center">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="tasks mx-3 mx-md-4 my-3" expanded="false" id="intro-213">
+            <div class="task d-flex align-items-center bg-white">
+              <div class="task-icon task-icon-text content--center bg-info rounded-circle">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <h5 class="m-0 ms-2 task-title">Video 3</h5>
+            </div>
+            <div class="task d-flex align-items-center bg-white">
+              <div class="task-icon task-icon-text content--center bg-warning rounded-circle">
+                <i class="fa-regular fa-file"></i>
+              </div>
+              <h5 class="m-0 ms-2 task-title">Task 2</h5>
+            </div>
+            <div class="task d-flex align-items-center bg-white">
+              <div class="task-icon task-icon-video content--center bg-info rounded-circle">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <h5 class="m-0 ms-2 task-title">Video 2</h5>
+            </div>
+            <div class="task d-flex align-items-center bg-white">
+              <div class="task-icon task-icon-text content--center bg-warning rounded-circle">
+                <i class="fa-regular fa-file"></i>
+              </div>
+              <h5 class="m-0 ms-2 task-title">Task 1</h5>
+            </div>
+            <div class="task d-flex align-items-center bg-white">
+              <div class="task-icon task-icon-video content--center bg-info rounded-circle">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <h5 class="m-0 ms-2 task-title">Video 1</h5>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  
 
   <!-- Footer Start -->
   <footer class="site-sec">
@@ -169,6 +256,6 @@
   <!-- Main js fiele -->
   <script src="JS/app.js"></script>
   <!-- Course js file -->
-  <script src="JS/courses.js"></script>
+  <script src="JS/tasks.js"></script>
 </body>
 </html>
