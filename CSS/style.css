@@ -893,6 +893,7 @@ footer a:hover{
   border-radius: 25px;
   margin-bottom: 15px;
   padding: 15px 25px;
+  cursor: pointer;
 }
 
 .task-icon{
@@ -906,7 +907,7 @@ footer a:hover{
   .course .course-details-title,
   .course .task-expand,
   .course .task-title{
-    font-size: 18px;
+    font-size: 15px;
   }
   .course-details-title, 
   .task-expand{

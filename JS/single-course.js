@@ -42,21 +42,6 @@ $(document).ready(function(){
         <!-- Course info Ending -->
       `;
       $('.latest-courses').append(card);
-      /*
-      <div class="small-card d-flex gap-2 mb-3 text-start">
-        <!-- Course image -->
-        <div class="small-card-img">
-          <img src="assets/images/front-end-diploma.jpg" class="w-100 h-100" alt="">
-        </div>
-        <!-- Course image Ending -->
-        <!-- Course info -->
-        <div class="small-card-text d-flex flex-column justify-content-between py-1">
-          <p class="small-card-title m-0 ft--15"><a class="site-link" href="">Front end Diploma</a></p>
-          <p class="small-card-price m-0 text-success ft--12">3200 L.E</p>
-        </div>
-        <!-- Course info Ending -->
-      </div>
-      */
     }
   })
 });

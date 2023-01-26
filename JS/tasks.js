@@ -26,3 +26,8 @@ function hideTask(task){
   $(task).attr('expanded', 'false');
   $(task).closest('.course').find('.task-expand').css('transform', 'rotate(0deg)');
 }
+
+$('.task').click((e) => {
+  let target = $(e.target).attr('target');
+  window.location.href = target;
+})
