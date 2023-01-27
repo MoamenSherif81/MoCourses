@@ -717,14 +717,13 @@ footer a:hover{
     object-position: top;
     border-radius: 5px;
   }
-  .single-course-details > div{
+  .single-course-details .detail{
     border-right: 1px #b4b4b4 solid;
     padding: 0 20px;
   }
-  .single-course-details > div:first-child{
-    padding-left: 0;
+  .single-course-details .detail:first-child{
   }
-  .single-course-details > div:last-child{
+  .single-course-details .detail:last-child{
     border: 0;
   }
   .course-details .related-courses .courses-cont img{
@@ -742,16 +741,17 @@ footer a:hover{
   /* Tags End */
 
   @media (max-width: 768px){
-    .single-course-text, 
+    .single-course-text{
+      font-size:15px
+    }
     .single-course-image, 
     .single-course-image button{
-      font-size:12px
+      font-size: 13px;
     }
-    
     .single-course-content{
       padding: 15px;
     }
-    .single-course-details > div{
+    .single-course-details .detail{
       border-right: 0;
       margin: 20px 0;
     }
@@ -762,9 +762,6 @@ footer a:hover{
       display: block;
       font-size: 15px;
     }
-  }
-  @media (max-width: 500px){
-    
   }
 /* Course Page End */
 
