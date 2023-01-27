@@ -200,15 +200,6 @@ main .prev-btn{left: 50px;}
 .slide-text.active{
   display: flex;
 }
-
-@keyframes text{
-  from{opacity: 0; transform: translateY(-20px);}
-  to{opacity: 1; transform: translateY(0);}
-}
-@keyframes text2{
-  from{opacity: 0; transform: translateY(20px);}
-  to{opacity: 1; transform: translateY(0);}
-}
 /*Main Slider End*/
 
 .description-text{
@@ -726,9 +717,6 @@ footer a:hover{
     object-position: top;
     border-radius: 5px;
   }
-  .single-course-details{
-    display: flex;
-  }
   .single-course-details > div{
     border-right: 1px #b4b4b4 solid;
     padding: 0 20px;
@@ -754,15 +742,14 @@ footer a:hover{
   /* Tags End */
 
   @media (max-width: 768px){
-    .single-course-image{
-      font-size: 15px;
+    .single-course-text, 
+    .single-course-image, 
+    .single-course-image button{
+      font-size:12px
     }
+    
     .single-course-content{
       padding: 15px;
-    }
-    .single-course-details{
-      display: block;
-      text-align: center;
     }
     .single-course-details > div{
       border-right: 0;
