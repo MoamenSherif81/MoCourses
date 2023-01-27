@@ -46,7 +46,7 @@ $(document).ready(function(){
     $(prevSlide).fadeOut(() =>  
       $(currSlide).fadeIn(() => {
         $(currSlideText).show();
-        $(currSlideText).children().fadeIn();
+        $(currSlideText).children().show();
       })
     );
   }
