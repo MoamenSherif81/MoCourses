@@ -7,7 +7,7 @@ $(document).ready(() => {
   $('.side-nav-btn-cont').click(swapNav)
   /* Event listner for the window resize to adjust the nav layout */
   $(window).on('resize', () => {
-    if($(window).width() > 768)
+    if($(window).width() > 753)
       $('.nav-items-cont').height('auto');
     else {
       $('.nav-items-cont').height(0);
