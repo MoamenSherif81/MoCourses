@@ -88,3 +88,9 @@ function changeSlide(){
 $(window).resize(() => {
   $(('.inst')).height($('.instructors-cont').prop('scrollHeight'));
 })
+
+$(document).ajaxStop(() => {
+  $(document).ready(() => {
+    $('.loading-screen').hide();
+  })
+})

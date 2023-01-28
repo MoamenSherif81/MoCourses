@@ -31,3 +31,7 @@ $('.task').click((e) => {
   let target = $(e.target).attr('target');
   window.location.href = target;
 })
+
+$(document).ready(() => {
+  $('.loading-screen').hide();
+})

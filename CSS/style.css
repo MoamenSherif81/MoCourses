@@ -32,9 +32,9 @@ body.nav-expanded{overflow: hidden;}
 }
 
 .fade-in{
-  transform: translateY(-50px);
+  transform: translateY(50px);
   opacity: 0;
-  transition: transform .3s, opacity .3s;
+  transition: transform 1s, opacity 1s;
 }
 
 .fade-in.appeared{

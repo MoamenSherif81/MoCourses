@@ -44,3 +44,9 @@ $(document).ready(function(){
     }
   });
 });
+
+$(document).ajaxStop(() => {
+  $(document).ready(() => {
+    $('.loading-screen').hide();
+  })
+})

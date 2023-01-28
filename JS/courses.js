@@ -94,3 +94,9 @@ function changeSlide(){
 $(window).on('scroll', () => {
   $(('.courses')).height($('.courses-cont').prop('scrollHeight'));
 })
+
+$(document).ajaxStop(() => {
+  $(document).ready(() => {
+    $('.loading-screen').hide();
+  })
+})

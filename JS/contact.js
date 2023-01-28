@@ -29,8 +29,6 @@ form.addEventListener('submit', (e) => {
   }
 })
 
-
-
 const contactCont = document.querySelector('.contact-form');
 const corr = {lat: 30.041395126095086, lng: 31.209324147137483};
 const map = new google.maps.Map(contactCont.querySelector('.map'), {
@@ -43,3 +41,7 @@ const marker = new google.maps.Marker({
   map: map,
   title: "Mo Courses"
 });
+
+$(document).ready(() => {
+  $('.loading-screen').hide();
+})

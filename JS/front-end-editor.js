@@ -76,3 +76,7 @@ function changeTab(){
     }
   }
 }
+
+$(document).ready(() => {
+  $('.loading-screen').hide();
+})
