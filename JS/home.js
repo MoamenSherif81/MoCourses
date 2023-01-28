@@ -50,6 +50,14 @@ function changeSlide(dir){
     })
   );
 }
+automaticSliding()
+function automaticSliding(){
+  setTimeout(() => {
+    changeSlide('next');
+    automaticSliding();
+  }, 5000);
+}
+
 //Main slider end
 //Courses Section start
 $.getJSON('Data/courses.json', (courses) => {
