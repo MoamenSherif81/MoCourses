@@ -42,7 +42,61 @@ body.nav-expanded{overflow: hidden;}
   opacity: 1;
 }
 
+/* Loading Screen Start */
+.loading-screen{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
+.loading-outer-circle,
+.loading-inner-circle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 200;
+}
+
+.loading-outer-circle{
+  width: 100px;
+  height: 100px;
+  border-left: 4px solid black;
+  animation-name: first;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.loading-inner-circle{
+  width: 75px;
+  height: 75px;
+  border-right: 4px solid black;
+  animation-name: second;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes first{
+  from{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to{
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes second{
+  from{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to{
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+/* Loading Screen End */
 
 /*Nav Start*/
 nav {

@@ -71,12 +71,12 @@
       </div>
       <div class="mx-3 m-sm-0">
         <div class="contact-form row">
-          <form action="" class=" col-12 col-md-6 rte">
-            <input type="text" placeholder="Enter Name" class="px-3 py-2 w-100 mb-3">
-            <input type="text" placeholder="Enter Email" class="px-3 py-2 w-100 mb-3">
-            <input type="text" placeholder="Enter Phone No." class="px-3 py-2 w-100 mb-3">
-            <input type="text" placeholder="Enter Subject" class="px-3 py-2 w-100 mb-3">
-            <textarea type="text" placeholder="Message" class="px-3 py-2 w-100"></textarea>
+          <form method="post" class="col-12 col-md-6">
+            <input type="text" placeholder="Enter Name" name="data[Name]" class="px-3 py-2 w-100 mb-3" required>
+            <input type="email" placeholder="Enter Email" name="data[Email]" class="px-3 py-2 w-100 mb-3" required>
+            <input type="number" placeholder="Enter Phone No." name="data[Phone]" class="phone-input px-3 py-2 w-100 mb-3" required>
+            <input type="text" placeholder="Enter Subject" name="data[Subject]" class="px-3 py-2 w-100 mb-3" required>
+            <textarea type="text" placeholder="Message" name="data[Message]" class="px-3 py-2 w-100" required></textarea>
             <input class="btn btn-warning px-4 py-2 text-white" type="submit"></input>
           </form>
           <div class="col-12 col-md-6 p-0">
@@ -167,6 +167,8 @@
   </footer>
   <!-- Footer End -->
 
+  <!-- Sweet Alert 2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- Google maps -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR2EbiPFT4E-h-nNgR5J7dBtH815uDmbw"></script>
   <!-- Swiper JS -->
