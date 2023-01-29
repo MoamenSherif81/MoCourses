@@ -25,8 +25,18 @@ $('main').on('mousedown touchstart', (e) => {
 })
 $('.carousel-next').click(() => changeSlide('next'));
 $('.carousel-prev').click(() => changeSlide('prev'));
+let timeOutSlide;
+automaticSliding();
+function automaticSliding(){
+  timeOutSlide = setTimeout(() => {
+    changeSlide('next');
+    automaticSliding();
+  }, 5000);
+}
 for(let i = 1; i < slidesText.length; i++) $(slidesText[i]).hide();
 function changeSlide(dir){
+  clearTimeout(timeOutSlide);
+  automaticSliding();
   let prev = currentSlide;
   let currSlide, currSlideText;
   let prevSlide, prevSlideText;
@@ -49,13 +59,6 @@ function changeSlide(dir){
       $(currSlideText).children().show();
     })
   );
-}
-automaticSliding()
-function automaticSliding(){
-  setTimeout(() => {
-    changeSlide('next');
-    automaticSliding();
-  }, 5000);
 }
 
 //Main slider end

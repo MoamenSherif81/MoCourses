@@ -6,35 +6,32 @@ let selectedInstructors = [];
 let navBtns = [];
 $(document).ready(function(){
   //Instructors Section start
-  function getInstructors(){
-    return $.getJSON('Data/instructors.json', (instructors) => {
-      for(instructor of instructors){
-        let card = document.createElement('div');
-        $(card).addClass('col-12 col-sm-6 col-lg-3 mb-4');
-        instructorsArr.push(card);
-        card.innerHTML = 
-        `
-        <div class="card text-left border-0 shadow h-100">
-            <div class="instructor-image position-relative">
-              <img class="card-img-top" src="assets/images/${instructor.image}" alt="">
-              <div class="instructor-social d-flex justify-content-center align-items-center 
-                          gap-4 position-absolute top-0 start-0 h-100 w-100">
-                <a class="social-icon" href=""><i class="fa-brands fa-facebook"></i></a>
-                <a class="social-icon" href=""><i class="fa-brands fa-twitter"></i></a>
-                <a class="social-icon" href=""><i class="fa-brands fa-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="card-body">
-              <h4 class="card-title ft--18"><a class="site-link" href="single-instructor.html?instId=${instructor.id}">${instructor.name}</a></h4>
-              <h4 class="card-description ft--15 text-secondary">${instructor.work}</h4>
+  $.getJSON('Data/instructors.json', (instructors) => {
+    for(instructor of instructors){
+      let card = document.createElement('div');
+      $(card).addClass('col-12 col-sm-6 col-lg-3 mb-4');
+      instructorsArr.push(card);
+      card.innerHTML = 
+      `
+      <div class="card text-left border-0 shadow h-100">
+          <div class="instructor-image position-relative">
+            <img class="card-img-top" src="assets/images/${instructor.image}" alt="">
+            <div class="instructor-social d-flex justify-content-center align-items-center 
+                        gap-4 position-absolute top-0 start-0 h-100 w-100">
+              <a class="social-icon" href=""><i class="fa-brands fa-facebook"></i></a>
+              <a class="social-icon" href=""><i class="fa-brands fa-twitter"></i></a>
+              <a class="social-icon" href=""><i class="fa-brands fa-linkedin"></i></a>
             </div>
           </div>
-        `
-        $('.instructors-cont').append(card);
-      }
-    });
-  }
-  getInstructors().then(() => {
+          <div class="card-body">
+            <h4 class="card-title ft--18"><a class="site-link" href="single-instructor.html?instId=${instructor.id}">${instructor.name}</a></h4>
+            <h4 class="card-description ft--15 text-secondary">${instructor.work}</h4>
+          </div>
+        </div>
+      `
+      $('.instructors-cont').append(card);
+    }
+  }).then(() => {
     length = instructorsArr.length;
     slidesCount = Math.ceil(length / 8);
     for(let i = 0; i < slidesCount; i++){
@@ -85,10 +82,12 @@ function changeSlide(){
   }
 }
 
+//Changing the height of the instructors section based on the height
 $(window).resize(() => {
   $(('.inst')).height($('.instructors-cont').prop('scrollHeight'));
 })
 
+//hiding the loading screen when the page is fully loaded
 $(document).ajaxStop(() => {
   $(document).ready(() => {
     $('.loading-screen').hide();

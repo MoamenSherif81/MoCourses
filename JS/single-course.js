@@ -1,10 +1,14 @@
 $(document).ready(function(){
   let urlParams = new URLSearchParams(window.location.search);
   let cardId = urlParams.get('cardId');
+  // Return to home if there is no cardId parameter in the url
   if(cardId == null) window.location.href = 'index.html';
+  //get all courses information
   $.getJSON('Data/courses.json', (courses) => {
+    //search for the course needed
     for(course of courses){
       if(cardId == course.id){
+        //adding the information of the course to the page
         $('.single-course').find('.single-course-title').text(course.title);
         $('.single-course').find('.single-course-instructor').text(course.instructor);
         $('.single-course').find('.single-course-instructor-img img').attr('src', course.instructorImg);
@@ -20,11 +24,14 @@ $(document).ready(function(){
       }
     }
     let cnt = 0;
+    //reversing the courses array to take the latest added courses
     courses.reverse();
+    //adding three courses to the latest courses section
     for(course of courses){
       if(course.id == cardId) continue;
       cnt++;
       if(cnt > 3) break;
+      //making the card that will contain the course information
       let card = document.createElement('div');
       card.className = 'small-card d-flex gap-2 mb-3 text-start';
       card.innerHTML = 
@@ -41,11 +48,13 @@ $(document).ready(function(){
         </div>
         <!-- Course info Ending -->
       `;
+      //appending the course to the section
       $('.latest-courses').append(card);
     }
   })
 });
 
+//hiding the loading screen when the page is fully loaded
 $(document).ajaxStop(() => {
   $(document).ready(() => {
     $('.loading-screen').hide();

@@ -50,6 +50,7 @@ body.nav-expanded{overflow: hidden;}
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 101;
 }
 
 .loading-outer-circle,
@@ -59,7 +60,6 @@ body.nav-expanded{overflow: hidden;}
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  z-index: 200;
 }
 
 .loading-outer-circle{
@@ -858,7 +858,7 @@ footer a:hover{
   .single-instructor .instructor-img{
     height: 400px;
     object-fit: cover;
-    object-position: center;
+    object-position: top;
   }
   .contact-title{
     width: 82px;
