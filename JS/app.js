@@ -34,13 +34,16 @@ $(document).ready(() => {
   dateCont.innerHTML = date.getFullYear();
 });
 
-if(localStorage.getItem('role') == 'instructor'){
+/* Check if the logged in user is a student or not */
+if(localStorage.getItem('role') != 'student'){
   $('.tasks-link').hide();
 }
-console.log(localStorage.getItem('email'));
+
+/* Check if the user is logged in or not to change the drop down content */
 if(localStorage.getItem('email')) $('.not-logged-in').hide();
 else $('.logged-in').hide();
 
+/* Function to logout */
 function logout(){
   localStorage.removeItem("email");
   localStorage.removeItem("role");
@@ -48,6 +51,7 @@ function logout(){
   window.location.href = 'login.html';
 }
 
+/* Function to swap the Nav dropdown menu */
 function swapNav(){
   if($('.side-nav-btn').hasClass('active')){
     $('.nav-items-cont').height('0');
@@ -58,6 +62,7 @@ function swapNav(){
   $('body').toggleClass('nav-expanded');
 }
 
+/* Function to swap the profile dropdown menu */
 function swapProfile(){
   if($('.profile-cont').hasClass('active')){
     $('.profile-cont').css({'height':'0'});
@@ -68,6 +73,7 @@ function swapProfile(){
   $('.profile-cont').toggleClass('active');
 }
 
-  function goToCourse(id){
-    window.location.href = 'single-course.html?cardId=' + id;
-  }
+/* Function that go to the single course page */
+function goToCourse(id){
+  window.location.href = 'single-course.html?cardId=' + id;
+}
