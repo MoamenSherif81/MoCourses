@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoCourses - Login</title>
+  <link rel="icon" href="assets/images/Logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="CSS/all.min.css" />
+  <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+  <section class="login-sec">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="login-image d-none d-lg-block col-md-7">
+          <img src="assets/images/login.png" class="h-100 w-100" alt="" />
+        </div>
+        <div class="col-12 col-lg-5 h-100">
+          <div class="login-cont px-3 px-lg-0 pe-lg-5">
+            <h1>Login</h1>
+            <p class="ft--15 text-secondary">
+              Please enter your login info below or press register to make a
+              new account
+            </p>
+            <form class="login-form">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control login-email-inp" id="floatingInput"
+                  placeholder="name@example.com" required />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control login-pass-inp" id="floatingLoginPassword"
+                  placeholder="Password" required />
+                <label for="floatingLoginPassword">Password</label>
+              </div>
+              <input type="submit" value="Login" class="btn btn-danger mt-3 ft--20 py-2 px-4" />
+              <a class="btn btn-danger mt-3 ft--20 py-2 px-4 ms-3 register-go-btn">Register</a>
+            </form>
+          </div>
+          <div class="register-cont px-3 px-lg-0 pe-lg-5">
+            <h1>Register</h1>
+            <p class="ft--15 text-secondary">Enter your information below</p>
+            <form class="register-form">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control register-name-inp" id="floatingNameInput" placeholder="Full Name"
+                  required />
+                <label for="floatingNameInput">Full Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control register-email-inp" id="floatingEmailInput"
+                  placeholder="name@example.com" required />
+                <label for="floatingEmailInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control register-pass-inp" id="floatingPassword"
+                  placeholder="Password" required />
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control register-conf-pass-inp" id="floatingConfPassword"
+                  placeholder="Confirm Password" required />
+                <label for="floatingConfPassword">Confirm Password</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control register-number-inp" id="floatingNumber"
+                  placeholder="01122233444" required />
+                <label for="floatingNumber">Phone Number</label>
+              </div>
+              <input type="submit" value="Create Account" class="btn btn-danger mt-2 ft--20 py-2 px-4" />
+              <p class="ft--15 text-secondary mt-3">
+                Already have an account? <a href="login.html">Login</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loading Screen End -->
+  <div class="loading-screen">
+    <div class="position-fixed w-100 h-100">
+      <div class="loading-outer-circle"></div>
+      <div class="loading-inner-circle"></div>
+    </div>
+  </div>
+  <!-- Loading Screen End -->
+
+  <!-- Sweet Alert 2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- JQuery 3.6.3 -->
+  <script src="JS/jquery-3.6.3.min.js"></script>
+  <!-- Font Awesome  -->
+  <script src="JS/all.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="JS/bootstrap.bundle.min.js"></script>
+  <!-- Js main file -->
+  <script src="JS/login.js"></script>
+</body>
+
+</html>

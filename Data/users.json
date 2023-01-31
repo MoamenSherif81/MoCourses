@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Student 1",
+    "email": "test@gmail.com",
+    "password": "123456",
+    "role": "student",
+    "courses": ["front end 408"],
+    "phoneNumber": "01020285982"
+  },
+  {
+    "name": "Moamen Sherif",
+    "email": "moamenyt@gmail.com",
+    "password": "moa123",
+    "role": "student",
+    "courses": ["front end 408", "intro to cs 211", "marketing 1002"],
+    "phoneNumber": "01022222222"
+  },
+  {
+    "name": "Instructor 1",
+    "email": "inst1@gmail.com",
+    "password": "inst123",
+    "role": "instructor",
+    "courses": ["intro to cs 211"],
+    "phoneNumber": "01022222222"
+  },
+  {
+    "name": "Instructor 2",
+    "email": "inst2@gmail.com",
+    "password": "inst123",
+    "role": "instructor",
+    "courses": ["front end 408"],
+    "phoneNumber": "01022222222"
+  }
+]

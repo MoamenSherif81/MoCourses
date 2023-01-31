@@ -1,76 +1,80 @@
-const options = { threshold: .25 }
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      $(entry.target).addClass('appeared');
-      $(entry.target).find('img').attr('src', $(entry.target).find('img').attr('data-src'));
-    } else {
-      return;
-    }
-  });
-}, options);
 
-//Main slider start
-let currentSlide = 1, slides = $('.main-carousel-item'), slidesText = $('.slide-text');
-$('main').on('mousedown touchstart', (e) => {
-  let initialPos = e.offsetX || e.originalEvent.touches[0].pageX;
-  let nowPos;
-  $(document).on("mousemove touchmove", (e) => nowPos = e.offsetX || e.originalEvent.touches[0].pageX);
-  $(document).on("mouseup touchend", (e) => {
-    console.log('Here');
-    if(nowPos - initialPos >= 100) changeSlide('prev');
-    else if(initialPos - nowPos >= 100) changeSlide('next');
-    $(document).off("mousemove touchmove mouseup touchend");
-  });
-})
+/* Declaring the needed variables for the slider */
+let currentSlide = 1;
+const slides = $('.main-carousel-item');
+const slidesText = $('.slide-text');
+const mainSection = $('main');
+const nextButton = $('.carousel-next');
+const prevButton = $('.carousel-prev');
+
+/* Touch and mouse events that fires when the finger or the mouse clicks into the main section */
+mainSection.on('mousedown touchstart', handleTouch)
+
+/* Mouse events for the carousel buttons to change the slide */
 $('.carousel-next').click(() => changeSlide('next'));
 $('.carousel-prev').click(() => changeSlide('prev'));
+
+/* Function to make the slider slides automatically each 5 seconds */
 let timeOutSlide;
-automaticSliding();
-function automaticSliding(){
+startAutomaticSliding();
+function startAutomaticSliding(){
+  /* Clear the previous timer */
+  clearTimeout(timeOutSlide);
+  /* Starts a new timer for the slide changing */
   timeOutSlide = setTimeout(() => {
     changeSlide('next');
-    automaticSliding();
+    startAutomaticSliding();
   }, 5000);
 }
+
+/* Hide all the slides text except for the first one */
 for(let i = 1; i < slidesText.length; i++) $(slidesText[i]).hide();
+/* Function to change the slide to the left of right */
 function changeSlide(dir){
-  clearTimeout(timeOutSlide);
-  automaticSliding();
+  /* Clear the The time out of the slides changing */
+  startAutomaticSliding();
+
+  /* Storing the previous slide number */
   let prev = currentSlide;
-  let currSlide, currSlideText;
-  let prevSlide, prevSlideText;
-  (dir == 'next') ? currentSlide++ : currentSlide--;
+  /* Change the value of the current slide based on the direction */
+  currentSlide = (dir == 'next') ? currentSlide + 1 : currentSlide - 1;
+
+  /* Check if the number of the current slides exceedes the slides count */
   if(currentSlide > 3) currentSlide = 1;
   else if(currentSlide < 1) currentSlide = 3;
-  for(let i = 0; i < slides.length; i++){
-    if($(slides[i]).attr('slide-id') == prev) prevSlide = slides[i];
-    else if($(slides[i]).attr('slide-id') == currentSlide) currSlide = slides[i];
-  }
-  for(let i = 0; i < slidesText.length; i++){
-    if($(slidesText[i]).attr('slide-id') == currentSlide)
-      currSlideText = slidesText[i];
-    $(slidesText[i]).children().fadeOut(() => $(slidesText[i]).hide());
-  }
+
+  /* Get the current and previous slides and text from the arrays using the filter function */
+  let currSlide = $(slides).filter(`[slide-id="${currentSlide}"]`);
+  let prevSlide = $(slides).filter(`[slide-id="${prev}"]`);
+  let currSlideText = $(slidesText).filter(`[slide-id="${currentSlide}"]`);
+  let prevSlideText = $(slidesText).filter(`[slide-id="${prev}"]`);
+
+  /* Hide the previous slide text */
   $(prevSlideText).children().fadeOut();
+  /* Hide the Previous slide */
   $(prevSlide).fadeOut(() =>  
+    /* show the next slide with some fade */
     $(currSlide).fadeIn(() => {
       $(currSlideText).show();
       $(currSlideText).children().show();
     })
   );
 }
+/* Main slider end */
 
-//Main slider end
-//Courses Section start
+/* Get courses info from the JSON File */
 $.getJSON('Data/courses.json', (courses) => {
+  /* Conter to make only 6 courses to appear */
   let cnt = 0;
-  for(course of courses){
+  /* Loop over the courses to show 6 of them */
+  $(courses).each((ind, course) => {
     cnt++;
-    if(cnt > 6) break;
+    if(cnt > 6) return;
+    /* Making the card that will contains all the course info */
     let card = document.createElement('div');
     $(card).addClass('col-12 col-md-6 col-lg-4 mt-4 fade-in');
-    card.innerHTML = 
+    /* Put the course info into the card */
+    $(card).append( 
     `
     <div class="card course-card border-0">
       <img data-src="${course.image}" class="card-img-top" alt="...">
@@ -90,27 +94,29 @@ $.getJSON('Data/courses.json', (courses) => {
         <button class="btn btn-success" onclick="goToCourse(${course.id})">Learn More</button>
       </div>
     </div>
-    `
+    `);
+    /* Make observe to make an animation when the card be at the view port */
     observer.observe(card);
+    /* Puting the ratting of the course */
     let stars = $(card).find('.star');
     for(let i = 0; i < course.rate; i++){
       $(stars[i]).addClass('filled');
     }
+    /* Append the course card to the section */
     $('.courses-cont').append(card);
-  }
+  });
 })
 
-//Courses Section end
-
-//Events Section start
+/* Getting the info of the events from JSON file */
 $.getJSON('Data/events.json', (events) => {
+  /* Counter to make only 3 events to appear */
   let cnt = 0;
-  for(event of events){
+  $(events).each((ind, event) => {
     cnt++;
-    if(cnt > 3) break;
+    if(cnt > 3) return;
+    /* Creating the card that will contain the info of the event */
     let card = document.createElement('div');
     $(card).addClass('col-12 col-md-6 col-lg-4 mt-4 fade-in');
-    observer.observe(card);
     card.innerHTML = 
     `
     <div class="card course-card border-0 h-100">
@@ -143,16 +149,16 @@ $.getJSON('Data/events.json', (events) => {
       </div>
     </div>
     `;
-    observer.observe(card.querySelector('.card'));
+    observer.observe(card);
     $('.events-cont').append(card);
-  }
+  });
 })
 
 $.getJSON('Data/instructors.json', (instructors) => {
   let cnt = 0;
-  for(instructor of instructors){
+  $(instructors).each((ind, instructor) => {
     cnt++;
-    if(cnt > 4) break;
+    if(cnt > 4) return;
     let card = document.createElement('div');
     $(card).addClass('col-12 col-sm-6 col-lg-3 mb-3 m-lg-0 fade-in');
     card.innerHTML = 
@@ -175,13 +181,42 @@ $.getJSON('Data/instructors.json', (instructors) => {
     `
     observer.observe(card);
     $('.instructors-cont').append(card);
-  }
+  });
 });
 
 const observeObj = document.querySelectorAll('.fade-in');
 observeObj.forEach(ele => {
   observer.observe(ele);
 })
+
+const options = { threshold: .25 }
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      $(entry.target).addClass('appeared');
+      $(entry.target).find('img').attr('src', $(entry.target).find('img').attr('data-src'));
+    } else {
+      return;
+    }
+  });
+}, options);
+
+function handleTouch(e){
+  /* Declaring variable theat will record the inistial position of the touch or the click */
+  let initialPos = e.offsetX || e.originalEvent.touches[0].pageX;
+  let nowPos;
+  /* 
+    Touch event that fires when the finger slides on the screen 
+    to change the last touch position
+  */
+  $(document).on("mousemove touchmove", (e) => nowPos = e.offsetX || e.originalEvent.touches[0].pageX);
+  $(document).on("mouseup touchend", (e) => {
+    /* Calculating if the touch move will make the slide go to the next one or not */
+    if(nowPos - initialPos >= 100) changeSlide('prev');
+    else if(initialPos - nowPos >= 100) changeSlide('next');
+    $(document).off("mousemove touchmove mouseup touchend");
+  });
+}
 
 $(document).ajaxStop(() => {
   $(document).ready(() => {

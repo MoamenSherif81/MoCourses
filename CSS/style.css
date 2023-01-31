@@ -113,7 +113,34 @@ nav {
 
 .logo-cont { width: 200px; }
 
-.profile-icon { width: 30px; }
+.profile-icon { 
+  font-size: 33px; 
+  color: white; 
+  transition: .3s;
+  cursor: pointer;
+}
+.profile-icon:hover { 
+  color: var(--sec-color); 
+}
+
+.profile-cont {
+  position: absolute;
+  top: 50.92px;
+  right: 0;
+  width: auto;
+  background-color: white;
+  height: 0;
+  overflow: hidden;
+  transition: .3s;
+}
+.profile-list{
+  padding: 20px 29px;
+}
+
+.profile-list li{white-space: nowrap;}
+.log-out{cursor: pointer; transition: .3s;}
+.log-out:hover{color: #ca9400;}
+
 
 .nav-items-cont{
   transition: .2s;
@@ -150,6 +177,7 @@ nav {
 .side-nav-btn-cont{
   cursor: pointer;
   height: 30px;
+  display: none;
 }
 
 .side-nav-btn,
@@ -163,7 +191,6 @@ nav {
 }
 
 .side-nav-btn{
-  display: none;
   position: relative;
 }
 
@@ -183,7 +210,6 @@ nav {
   bottom: 0;
   transform: rotate(90deg);
 }
-
 
 .side-bar-logo{
   display: none;
@@ -642,8 +668,8 @@ footer a:hover{
   nav{
     background-color: black;
   }
-  .side-nav-btn{
-    display: block;
+  .side-nav-btn-cont{
+    display: flex;
   }
   .nav-items-cont{
     position: absolute;
@@ -1013,69 +1039,19 @@ footer a:hover{
   
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .carousel-image{
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-inner{
+/* Login Page */
+.login-image{
   height: 100vh;
 }
-
-.carousel-item{
-  height: 100%;
+.login-image img{
+  object-fit: contain;
 }
-
-.slide-text{
-  z-index: 40;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: fit-content;
+.login-cont, .register-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
 }
-.carousel-item.active .slide-text  h1{
-  animation-name: text;
-  animation-duration: 1s;
+.register-cont {
+  display: none;
 }
-.carousel-item.active .slide-text p,
-.carousel-item.active .slide-text a,
-.carousel-item.active .slide-text button{
-  animation-name: text2;
-  animation-duration: 1s;
-}
-
-@keyframes text{
-  from{opacity: 0; transform: translateY(-20px);}
-  to{opacity: 1; transform: translateY(0);}
-}
-@keyframes text2{
-  from{opacity: 0; transform: translateY(20px);}
-  to{opacity: 1; transform: translateY(0);}
-} */
