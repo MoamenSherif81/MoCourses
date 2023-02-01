@@ -4,7 +4,7 @@
     "email": "test@gmail.com",
     "password": "123456",
     "role": "student",
-    "courses": ["front end 408"],
+    "courses": [312, 1002, 211],
     "phoneNumber": "01020285982"
   },
   {
@@ -12,7 +12,7 @@
     "email": "moamenyt@gmail.com",
     "password": "moa123",
     "role": "student",
-    "courses": ["front end 408", "intro to cs 211", "marketing 1002"],
+    "courses": [408, 213, 1002],
     "phoneNumber": "01022222222"
   },
   {
@@ -20,7 +20,7 @@
     "email": "inst1@gmail.com",
     "password": "inst123",
     "role": "instructor",
-    "courses": ["intro to cs 211"],
+    "courses": [211],
     "phoneNumber": "01022222222"
   },
   {
@@ -28,7 +28,7 @@
     "email": "inst2@gmail.com",
     "password": "inst123",
     "role": "instructor",
-    "courses": ["front end 408"],
+    "courses": [408],
     "phoneNumber": "01022222222"
   }
 ]

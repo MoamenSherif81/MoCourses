@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 408,
     "title": "Front end Diploma",
     "description": "This is the description of the course of this card",
     "instructor": "Osama El-zero",
@@ -8,12 +8,13 @@
     "categories": ["Development"],
     "students": 275,
     "rate": 4,
+    "status" : "In Progress",
     "price": "3600 L.E",
     "image": "assets/images/front-end-diploma.jpg",
     "tags": ["Design", "jQuery", "Branding", "Web", "Web development", "HTML", "CSS", "JS"]
   },
   {
-    "id" : 2,
+    "id" : 502,
     "title": "English Course",
     "description": "This is the description of the course of this card",
     "instructor": "Kally Brooks",
@@ -21,12 +22,13 @@
     "categories": ["Development"],
     "students": 90,
     "rate": 5,
+    "status" : "Finished",
     "price": "1500 L.E",
     "image": "assets/images/english-course.jpg",
     "tags": ["General", "English", "Communication", "English Speaking"]
   },
   {
-    "id" : 3,
+    "id" : 1002,
     "title": "Marketing Diploma",
     "description": "This is the description of the course of this card",
     "instructor": "David Clark",
@@ -34,12 +36,13 @@
     "categories": ["Development"],
     "students": 88,
     "rate": 3,
+    "status" : "In Progress",
     "price": "3100 L.E",
     "image": "assets/images/marketing.jpg",
     "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
-    "id" : 4,
+    "id" : 312,
     "title": "Back end Diploma",
     "description": "This is the description of the course of this card",
     "instructor": "Mostafa Mahfouz",
@@ -47,25 +50,27 @@
     "categories": ["Development"],
     "students": 223,
     "rate": 4,
+    "status" : "In Progress",
     "price": "3600 L.E",
     "image": "assets/images/back-end-diploma.jpg",
     "tags": ["Web", "Web development", "HTML", "CSS", "PHP", "Laravel"]
   },
   {
-    "id" : 5,
-    "title": "Introduction to CS Diploma",
+    "id" : 213,
+    "title": "Introduction to CS",
     "description": "This is the description of the course of this card",
     "instructor": "Moamen Sherif",
     "instructorImg": "assets/images/Moamen Sherif.jpeg",
     "categories": ["Development"],
     "students": 400,
     "rate": 5,
+    "status" : "Finished",
     "price": "3000 L.E",
     "image": "assets/images/intro-to-cs-diploma.png",
     "tags": ["Computer Science", "CS", "C++", "Basics", "OOP", "Data Structures", "Problem solving"]
   },
   {
-    "id" : 6,
+    "id" : 102,
     "title": "Programming for kids",
     "description": "This is the description of the course of this card",
     "instructor": "Mareim Ragab",
@@ -73,12 +78,13 @@
     "categories": ["Development"],
     "students": 150,
     "rate": 4,
+    "status" : "Finished",
     "price": "2000 L.E",
     "image": "assets/images/Programming-Course-for-Kids.jpg",
     "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
-    "id" : 9,
+    "id" : 1003,
     "title": "Marketing Diploma",
     "description": "This is the description of the course of this card",
     "instructor": "David Clark",
@@ -86,12 +92,13 @@
     "categories": ["Development"],
     "students": 88,
     "rate": 3,
+    "status" : "In Progress",
     "price": "3100 L.E",
     "image": "assets/images/marketing.jpg",
     "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
-    "id": 7,
+    "id": 409,
     "title": "Front end Diploma",
     "description": "This is the description of the course of this card",
     "instructor": "Osama El-zero",
@@ -99,12 +106,13 @@
     "categories": ["Development"],
     "students": 275,
     "rate": 4,
+    "status" : "In Progress",
     "price": "3600 L.E",
     "image": "assets/images/front-end-diploma.jpg",
     "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
-    "id" : 8,
+    "id" : 504,
     "title": "English Course",
     "description": "This is the description of the course of this card",
     "instructor": "Kally Brooks",
@@ -112,25 +120,27 @@
     "categories": ["Development"],
     "students": 90,
     "rate": 5,
+    "status" : "Finished",
     "price": "1500 L.E",
     "image": "assets/images/english-course.jpg",
     "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
-    "id" : 11,
-    "title": "Introduction to CS Diploma",
+    "id" : 211,
+    "title": "Introduction to CS",
     "description": "This is the description of the course of this card",
     "instructor": "Moamen Sherif",
     "instructorImg": "assets/images/Moamen Sherif.jpeg",
     "categories": ["Development"],
     "students": 400,
     "rate": 5,
+    "status" : "Finished",
     "price": "3000 L.E",
     "image": "assets/images/intro-to-cs-diploma.png",
     "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
-    "id" : 10,
+    "id" : 309,
     "title": "Back end Diploma",
     "description": "This is the description of the course of this card",
     "instructor": "Mostafa Mahfouz",
@@ -138,12 +148,13 @@
     "categories": ["Development"],
     "students": 223,
     "rate": 4,
+    "status" : "Finished",
     "price": "3600 L.E",
     "image": "assets/images/back-end-diploma.jpg",
     "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
-    "id" : 12,
+    "id" : 103,
     "title": "Programming for kids",
     "description": "This is the description of the course of this card",
     "instructor": "Mareim Ragab",
@@ -151,12 +162,13 @@
     "categories": ["Development"],
     "students": 150,
     "rate": 4,
+    "status" : "In Progress",
     "price": "2000 L.E",
     "image": "assets/images/Programming-Course-for-Kids.jpg",
     "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
-    "id" : 14,
+    "id" : 503,
     "title": "English Course",
     "description": "This is the description of the course of this card",
     "instructor": "Kally Brooks",
@@ -164,12 +176,13 @@
     "categories": ["Development"],
     "students": 90,
     "rate": 5,
+    "status" : "Finished",
     "price": "1500 L.E",
     "image": "assets/images/english-course.jpg",
     "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },
   {
-    "id" : 15,
+    "id" : 1004,
     "title": "Marketing Diploma",
     "description": "This is the description of the course of this card",
     "instructor": "David Clark",
@@ -177,11 +190,12 @@
     "categories": ["Development"],
     "students": 88,
     "rate": 3,
+    "status" : "In Progress",
     "price": "3100 L.E",
     "image": "assets/images/marketing.jpg",
     "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
   },{
-    "id": 13,
+    "id": 410,
     "title": "Front end Diploma",
     "description": "This is the description of the course of this card",
     "instructor": "Osama El-zero",
@@ -189,6 +203,7 @@
     "categories": ["Development"],
     "students": 275,
     "rate": 4,
+    "status" : "In Progress",
     "price": "3600 L.E",
     "image": "assets/images/front-end-diploma.jpg",
     "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
