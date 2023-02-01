@@ -85,25 +85,6 @@ function addSingleTask(link, type, name, tasksCont){
   )
 }
 
-/*
-<div class="course rounded-5">
-  <div class="course-details d-flex align-items-center justify-content-between bg-white rounded-5" targetId="marketing-1002">
-    <h5 class="course-details-title my-0">Marketing 1002</h5>
-    <div class="task-expand p-2 content--center">
-      <i class="fa-solid fa-angle-down"></i>
-    </div>
-  </div>
-  <div class="tasks mx-3 mx-md-4 my-3" expanded="false" id="marketing-1002">
-    <div class="task d-flex align-items-center bg-white" target="Data/task.pdf">
-      <div class="task-icon task-icon-text content--center bg-warning rounded-circle">
-        <i class="fa-regular fa-file"></i>
-      </div>
-      <h5 class="m-0 ms-2 task-title">Task 1</h5>
-    </div>
-  </div>
-</div>
-*/
-
 function courseClick(e){
   let id = $(e.target).closest('.course-details').attr('targetid');
   let tasks = $('.tasks');
@@ -133,6 +114,8 @@ function collapseTask(task){
   $(task).closest('.course').find('.task-expand').css('transform', 'rotate(0deg)');
 }
 
-$(document).ready(() => {
-  $('.loading-screen').hide();
+$(document).ajaxStop(() => {
+  $(document).ready(() => {
+    $('.loading-screen').hide();
+  })
 })
