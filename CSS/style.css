@@ -389,7 +389,8 @@ main .prev-btn{left: 50px;}
 
 .courses-cont img{
   object-fit: cover;
-  height: 200px
+  height: 200px;
+  cursor: pointer;
 }
 
 .course-card:hover{
