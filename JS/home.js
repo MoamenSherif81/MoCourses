@@ -50,7 +50,9 @@ function changeSlide(dir){
   let prevSlideText = $(slidesText).filter(`[slide-id="${prev}"]`);
 
   /* Hide the previous slide text */
-  $(prevSlideText).children().fadeOut();
+  $(prevSlideText).children().fadeOut(() => {
+    $(prevSlideText).hide();
+  });
   /* Hide the Previous slide */
   $(prevSlide).fadeOut(() =>  
     /* show the next slide with some fade */

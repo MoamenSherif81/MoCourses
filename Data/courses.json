@@ -10,7 +10,7 @@
     "rate": 4,
     "price": "3600 L.E",
     "image": "assets/images/front-end-diploma.jpg",
-    "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
+    "tags": ["Design", "jQuery", "Branding", "Web", "Web development", "HTML", "CSS", "JS"]
   },
   {
     "id" : 2,
@@ -23,7 +23,7 @@
     "rate": 5,
     "price": "1500 L.E",
     "image": "assets/images/english-course.jpg",
-    "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
+    "tags": ["General", "English", "Communication", "English Speaking"]
   },
   {
     "id" : 3,
@@ -49,7 +49,7 @@
     "rate": 4,
     "price": "3600 L.E",
     "image": "assets/images/back-end-diploma.jpg",
-    "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
+    "tags": ["Web", "Web development", "HTML", "CSS", "PHP", "Laravel"]
   },
   {
     "id" : 5,
@@ -62,7 +62,7 @@
     "rate": 5,
     "price": "3000 L.E",
     "image": "assets/images/intro-to-cs-diploma.png",
-    "tags": ["General", "Design", "jQuery", "Branding", "Modern", "Blog", "Quotes", "Advertisment"]
+    "tags": ["Computer Science", "CS", "C++", "Basics", "OOP", "Data Structures", "Problem solving"]
   },
   {
     "id" : 6,

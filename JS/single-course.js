@@ -16,6 +16,9 @@ $(document).ready(function(){
         $('.single-course').find('.single-course-stud-num').text(course.students);
         $('.single-course').find('.single-course-categories').text(course.categories.join(', '));
         $('.single-course').find('.overview-text').text(course.description);
+        course.tags.forEach((tag) => {
+          $('.single-course').find('.tags-list').append(`<li class="tag">${tag}</li>`)
+        })
         let stars = $('.single-course').find('.star');
         for(let i = 0; i < course.rate; i++){
           $(stars[i]).addClass('filled');
