@@ -40,7 +40,7 @@ loginForm.addEventListener('submit', (e) => {
       icon: 'error',
       confirmButtonText: 'OK'
     });
-    $(pass).val('');
+    $(loginPass).val('');
   }
 })
 
