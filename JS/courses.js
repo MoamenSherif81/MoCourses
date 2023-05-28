@@ -54,12 +54,12 @@ $(document).ready(function(){
       navBtns.push(btn);
     }
     toggleNav();
-    $('.slide-btn').click((e) => {
+    $('.slide-btn').click(paginationTrottle((e) => {
       active = $(e.target).attr('slideId');
       toggleNav();
-    })
-    $('.slide-next').click(() => {active++, toggleNav()});
-    $('.slide-prev').click(() => {active--, toggleNav()});
+    }))
+    $('.slide-next').click(paginationTrottle(() => {active++, toggleNav()}));
+    $('.slide-prev').click(paginationTrottle(() => {active--, toggleNav()}));
     function toggleNav(){
       if(active < 1) active = slidesCount;
       else if(active > slidesCount) active = 1;
@@ -100,3 +100,13 @@ $(document).ajaxStop(() => {
     $('.loading-screen').hide();
   })
 })
+
+function paginationTrottle(func, delay = 700){
+  let last = 0;
+  return (e) => {
+    const now = new Date().getTime();
+    if(now - last < delay) return;
+    last = now;
+    return func(e);
+  }
+}
