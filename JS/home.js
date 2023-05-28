@@ -10,9 +10,19 @@ const prevButton = $('.carousel-prev');
 /* Touch and mouse events that fires when the finger or the mouse clicks into the main section */
 mainSection.on('mousedown touchstart', handleTouch)
 
+function slideTrottle(func, delay, mode){
+  let last = 0;
+  return () => {
+    const now = new Date().getTime();
+    if(now - last < delay) return;
+    last = now;
+    return func(mode);
+  }
+}
+
 /* Mouse events for the carousel buttons to change the slide */
-$('.carousel-next').click(() => changeSlide('next'));
-$('.carousel-prev').click(() => changeSlide('prev'));
+$('.carousel-next').click(slideTrottle(changeSlide, 1500, 'next'));
+$('.carousel-prev').click(slideTrottle(changeSlide, 1500, 'prev'));
 
 /* Function to make the slider slides automatically each 5 seconds */
 let timeOutSlide;
@@ -66,7 +76,7 @@ function changeSlide(dir){
 
 /* Get courses info from the JSON File */
 $.getJSON('Data/courses.json', (courses) => {
-  /* Conter to make only 6 courses to appear */
+  /* Counter to make only 6 courses to appear */
   let cnt = 0;
   /* Loop over the courses to show 6 of them */
   $(courses).each((ind, course) => {
