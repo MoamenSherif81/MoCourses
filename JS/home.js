@@ -10,19 +10,11 @@ const prevButton = $('.carousel-prev');
 /* Touch and mouse events that fires when the finger or the mouse clicks into the main section */
 mainSection.on('mousedown touchstart', handleTouch)
 
-function slideTrottle(func, delay, mode){
-  let last = 0;
-  return () => {
-    const now = new Date().getTime();
-    if(now - last < delay) return;
-    last = now;
-    return func(mode);
-  }
-}
+let slideThrottle = throttle(changeSlide, 1500);
 
 /* Mouse events for the carousel buttons to change the slide */
-$('.carousel-next').click(slideTrottle(changeSlide, 1500, 'next'));
-$('.carousel-prev').click(slideTrottle(changeSlide, 1500, 'prev'));
+$('.carousel-next').click(() => slideThrottle('next'));
+$('.carousel-prev').click(() => slideThrottle('prev'));
 
 /* Function to make the slider slides automatically each 5 seconds */
 let timeOutSlide;
@@ -32,7 +24,7 @@ function startAutomaticSliding(){
   clearTimeout(timeOutSlide);
   /* Starts a new timer for the slide changing */
   timeOutSlide = setTimeout(() => {
-    changeSlide('next');
+    slideThrottle('next');
     startAutomaticSliding();
   }, 5000);
 }

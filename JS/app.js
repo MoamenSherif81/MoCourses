@@ -2,6 +2,16 @@ let profileCont = $('.profile-cont');
 let sideNavBtn = $('.side-nav-btn');
 let sideNavBCont = $('.nav-items-cont');
 
+function throttle(func, delay = 1000){
+  let last = 0;
+  return (...args) => {
+    const now = new Date().getTime();
+    if(now - last < delay) return;
+    last = now;
+    return func(...args);
+  }
+}
+
 $(document).ready(() => {
   //nav bar start
   checkScroll();
